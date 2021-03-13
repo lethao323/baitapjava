@@ -1,22 +1,30 @@
-package baitap;
+package baitapngay10t3;
 import java.util.Scanner;
 public class bai3 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		String ten;
-		System.out.println("nhap vao ten cua ban");
-		ten = sc.nextLine();
-		int ns ;
-		System.out.println("nhap nam sinh cua ban");
-		ns = sc.nextInt();
-		if(2020-ns< 16)
-		    System.out.println("ban "+ten+" o tuoi vi thanh nien");
-		if(2020-ns >=18)
-		    System.out.println("ban "+ten+" da gia");
-		else
-		    System.out.println("ban " +ten +" o do tuoi truong thanh");
+		int n;
+		Scanner s= new Scanner(System.in);
+		
+		do {
+			System.out.println("Nhap vao bac cua ma tran: ");
+			n= s.nextInt();
+		}while(n<0);
+		
+		int[][] A = new int[n][n];
+		System.out.println("Nhap vao cac ptu cua ma tran A: ");
+		for(int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.println("A[" + i + "][" + j + "]= ");
+				A[i][j]= s.nextInt();
+			}
+		}
+		
+		System.out.println("Ma tran A: ");
+		for(int i=0;i<n;i++) {
+			for (int j=0;j<n;j++) {
+				System.out.print(A[i][j] + "\t");
+			}
+			System.out.println("\n");
+		}
 	}
-
 }
